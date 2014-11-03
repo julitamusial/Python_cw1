@@ -5,10 +5,10 @@ def fizz_buzz(n):
             print "Fizz",
         elif i%5 == 0:
             print "Buzz",
-        elif i%15 == 0:
+        elif i%3 == 0 and i%5 == 0:         #or i%15 == 0
             print "Fizz Buzz",
         else:
             print i,
     return
 
-fizz_buzz(30)
+fizz_buzz(40)
