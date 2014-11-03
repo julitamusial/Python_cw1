@@ -1,39 +1,37 @@
 from math import sqrt
 
-#Funkcja kwadratowa, ktÃ³ra liczy wartoÄ‡ funkcji dla zadanych parametrÃ³w
+#-*- coding: utf-8 -*-
+
+#Funkcja kwadratowa, która liczy wartosc funkcji dla zadanych parametrów
 def funkcja_kwadratowa(a,b,c,x):
     y = a*x**2 + b*x + c
-  #  print "WartosÄ‡ funkcji wynosi: %f" % y
     return y
     
-print "Wartosc funkcji wynosi:"
-print funkcja_kwadratowa(1,2,3,5)
 
-
-#Funkcja, ktÃ³ra liczy miejsca zerowe trÃ³jmianu kwadratowego
+#Funkcja, która liczy miejsca zerowe trójmianu kwadratowego
 def miejsca_zerowe(a,b,c):
 
-    delta = b**2 - 4 * a * c
+    delta = b**2 - 4*a*c
     
     if delta > 0:
         x1 = (-b-sqrt(delta)) / 2*a
-    	x2 = (-b+sqrt(delta)) / 2*a				
-    #	print "Miejsca zerowe to x1 = %f , x2 = %f" % ( x1,x2)	
+        x2 = (-b+sqrt(delta)) / 2*a				
         return x1, x2
     elif delta == 0:
     	x0 = (b-sqrt(delta)) / 2*a
-    #	print "Funkcja posiada tylko jedno miejsce zerowe x0 = %f" % x0
-        
     else:
-    #	print "Delta ujemna, brak miejsc zerowych"
-        return "de;lta"
+        return None
+        
+a = -2
+b = 1
+c = 1
 
-print miejsca_zerowe(1,3,2)
+print "Funkcja kwadratowa ma postaæ: y = %s*x^2 + %s*x + %s" % (a,b,c)
+print "\nDla zadanych parametrów: a = %s, b = %s, c = %s, \nmiejsca zerowe funkcji kwadratowej wynosz¹: " %(a,b,c), miejsca_zerowe(a,b,c)
 
 
-#Obliczenie wartosci funkcji w przedziale (-10,10)
+#Obliczenie wartoœci funkcji w przedziale (-10,10)
 dziedzina = range(-10,11)
-
-print "Wartosci funkcji dla argumentow w przedziale (-10,10)"
+print "\nWartoœci funkcji kwadratowej dla argumentów w przedziale (-10,10) wynosz¹: "
 for i in dziedzina:
-    print funkcja_kwadratowa(1,2,3,i)
+    print funkcja_kwadratowa(a,b,c,i),
