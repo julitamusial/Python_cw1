@@ -1,5 +1,7 @@
-from math import sqrt
+#Zadanie 3
+#Fukcja kwadratowa
 
+from math import sqrt
 #-*- coding: utf-8 -*-
 
 #Funkcja kwadratowa, która liczy wartosc funkcji dla zadanych parametrów
