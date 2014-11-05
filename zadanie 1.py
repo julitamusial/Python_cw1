@@ -1,3 +1,6 @@
+##Zadanie 1
+##Fizz Buzz
+
 def fizz_buzz(n):
     dane = range (1,n)
     for i in dane:
